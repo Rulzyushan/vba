@@ -1,0 +1,129 @@
+Sub downTimeCAL()
+
+Dim i As Integer
+i = 2
+'For i = 2 To 5
+
+Do While Cells(i, 1).Value <> ""
+     
+If Cells(i, 3).Value = 0 Then
+            If Cells(i, 4).Value < Cells(2, 6).Value Then
+                 If Cells(i, 5).Value < Cells(2, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(2, 6).Value And Cells(i, 5).Value < Cells(3, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(3, 6).Value) - Cells(4, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(3, 6).Value And Cells(i, 5).Value < Cells(6, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value) - Cells(4, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(6, 6).Value And Cells(i, 5).Value < Cells(7, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(7, 6).Value) - (Cells(4, 6).Value + Cells(8, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(7, 6).Value And Cells(i, 5).Value < Cells(10, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value) - (Cells(4, 6).Value + Cells(8, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(10, 6).Value And Cells(i, 5).Value < Cells(11, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(11, 6).Value) - (Cells(4, 6).Value + Cells(8, 6).Value + Cells(12, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(11, 6).Value And Cells(i, 5).Value < Cells(15, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value) - (Cells(4, 6).Value + Cells(8, 6).Value + Cells(12, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 'ElseIf Cells(i, 5).Value = 1 Then
+                   'Cells(i, 15).Value = (Cells(i, 4).Value - Cells(i, 5).Value) - (Cells(4, 14).Value + Cells(8, 14).Value + Cells(12, 14).Value)
+                 End If
+            End If
+            
+          If Cells(i, 4).Value >= Cells(2, 6).Value And Cells(i, 4).Value < Cells(3, 6).Value Then
+                 If Cells(i, 5).Value >= Cells(3, 6).Value And Cells(i, 5).Value < Cells(6, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(3, 6).Value - Cells(i, 5).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(6, 6).Value And Cells(i, 5).Value < Cells(7, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(3, 6).Value - Cells(7, 6).Value) - Cells(8, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(7, 6).Value And Cells(i, 5).Value < Cells(10, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(3, 6).Value - Cells(i, 5).Value) - Cells(8, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(10, 6).Value And Cells(i, 5).Value < Cells(11, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(3, 6).Value - Cells(11, 6).Value) - (Cells(8, 6).Value + Cells(12, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(11, 6).Value And Cells(i, 5).Value < Cells(15, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(3, 6).Value - Cells(i, 5).Value) - (Cells(8, 6).Value + Cells(12, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 End If
+            End If
+            
+         If Cells(i, 4).Value >= Cells(3, 6).Value And Cells(i, 4).Value < Cells(6, 6).Value Then
+                 If Cells(i, 5).Value < Cells(6, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(6, 6).Value And Cells(i, 5).Value < Cells(7, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(7, 6).Value) - Cells(8, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(7, 6).Value And Cells(i, 5).Value < Cells(10, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value) - Cells(8, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(10, 6).Value And Cells(i, 5).Value < Cells(11, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(11, 6).Value) - (Cells(8, 6).Value + Cells(12, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(11, 6).Value And Cells(i, 5).Value < Cells(15, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value) - (Cells(8, 6).Value + Cells(12, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 End If
+            End If
+             
+         If Cells(i, 4).Value >= Cells(6, 6).Value And Cells(i, 4).Value < Cells(7, 6).Value Then
+                 If Cells(i, 5).Value < Cells(7, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(7, 6).Value And Cells(i, 5).Value < Cells(10, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(7, 6).Value - Cells(i, 5).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(10, 6).Value And Cells(i, 5).Value < Cells(11, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(7, 6).Value - Cells(11, 6).Value) - Cells(12, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(11, 6).Value And Cells(i, 5).Value < Cells(15, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(7, 6).Value - Cells(i, 5).Value) - Cells(12, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 End If
+            End If
+End If
+
+If Cells(i, 3).Value = 1 Then
+            If Cells(i, 4).Value < Cells(2, 6).Value Then
+                 If Cells(i, 5).Value < Cells(2, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(2, 6).Value And Cells(i, 5).Value < Cells(3, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(3, 6).Value) - Cells(4, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(3, 6).Value And Cells(i, 5).Value < Cells(6, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value) - Cells(4, 6).Value
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(6, 6).Value And Cells(i, 5).Value < Cells(7, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(7, 6).Value) - (Cells(4, 6).Value + Cells(8, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(7, 6).Value And Cells(i, 5).Value < Cells(10, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value) - (Cells(4, 6).Value + Cells(8, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(10, 6).Value And Cells(i, 5).Value < Cells(11, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(11, 6).Value) - (Cells(4, 6).Value + Cells(8, 6).Value + Cells(12, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 ElseIf Cells(i, 5).Value >= Cells(11, 6).Value And Cells(i, 5).Value < Cells(15, 6).Value Then
+                   Cells(i, 7).Value = Abs(Cells(i, 4).Value - Cells(i, 5).Value) - (Cells(4, 6).Value + Cells(8, 6).Value + Cells(12, 6).Value)
+                   Cells(i + 1, 7).ClearContents
+                 'ElseIf Cells(i, 5).Value = 1 Then
+                   'Cells(i, 15).Value = (Cells(i, 4).Value - Cells(i, 5).Value) - (Cells(4, 14).Value + Cells(8, 14).Value + Cells(12, 14).Value)
+                 End If
+            End If
+             
+End If
+     
+     
+     i = i + 1
+     
+Loop
+'Next i
+
+
+End Sub
